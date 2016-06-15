@@ -19,9 +19,8 @@ import android.text.TextUtils;
 
 public class Utility {
 
-	/**
-	 * 解析和处理服务器返回的省级数据
-	 */
+	
+	 //解析和处理服务器返回的省级数据
 	public synchronized static boolean handleProvincesResponse(
 			CoolWeatherDB coolWeatherDB, String response) {
 		if (!TextUtils.isEmpty(response)) {
@@ -41,9 +40,7 @@ public class Utility {
 		return false;
 	}
 
-	/**
-	 * 解析和处理服务器返回的市级数据
-	 */
+	 //解析和处理服务器返回的市级数据
 	public static boolean handleCitiesResponse(CoolWeatherDB coolWeatherDB,
 			String response, int provinceId) {
 		if (!TextUtils.isEmpty(response)) {
@@ -64,9 +61,7 @@ public class Utility {
 		return false;
 	}
 
-	/**
-	 * 解析和处理服务器返回的县级数据
-	 */
+	 //解析和处理服务器返回的县级数据
 	public static boolean handleCountiesResponse(CoolWeatherDB coolWeatherDB,
 			String response, int cityId) {
 		if (!TextUtils.isEmpty(response)) {
@@ -87,9 +82,7 @@ public class Utility {
 		return false;
 	}
 
-	/**
-	 * 解析服务器返回的JSON数据，并将解析出的数据存储到本地。
-	 */
+	 //解析服务器返回的JSON数据，并将解析出的数据存储到本地
 	public static void handleWeatherResponse(Context context, String response) {
 		try {
 			JSONObject jsonObject = new JSONObject(response);
@@ -107,9 +100,7 @@ public class Utility {
 		}
 	}
 
-	/**
-	 * 将服务器返回的所有天气信息存储到SharedPreferences文件中。
-	 */
+	 // 将服务器返回的所有天气信息存储到SharedPreferences文件中	 
 	public static void saveWeatherInfo(Context context, String cityName,
 			String weatherCode, String temp1, String temp2, String weatherDesp,
 			String publishTime) {
